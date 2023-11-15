@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leds</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: #202020;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      min-height: 80vh;
+      padding: 10vh 0;
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 35px 50px;
+      border: 2px solid #fff;
+      font-size: 20px;
+      color: #fff;
+      transition: 0.25s;
+
+      &:hover {
+        opacity: 0.75;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+    }
+
+    .blue {
+      border: 2px solid rgb(0, 15, 255);
+      &:hover {
+        background-color: rgb(0, 15, 255);
+      }
+    }
+    .blue-active {
+      background-color: rgb(0, 15, 255);
+    }
+
+    .red {
+      border: 2px solid rgb(255, 15, 0);
+      &:hover {
+        background-color: rgb(255, 15, 0);
+      }
+    }
+    .red-active {
+      background-color: rgb(255, 15, 0);
+    }
+  </style>
+
+
+  <body>
+    <a class="blue" href="?led=blue"> Blue </a>
+    <a class="red" href="?led=red"> Red </a>
+  </body>
+  <script>
+    let currentURL = window.location.href;
+
+    if (currentURL.includes("blue")) {
+        document.querySelector(".blue").classList.add("blue-active");
+    }
+
+    if (currentURL.includes("red")) {
+       document.querySelector(".red").classList.add("red-active");
+    }
+  </script>
+</html>
