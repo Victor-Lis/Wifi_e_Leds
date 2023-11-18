@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-const char* ssid     = "Oalis";
-const char* password = "oalis636807";
+const char* ssid     = "------";
+const char* password = "********";
 
 const int ledBlue =  26;      // the number of the LED pin
 const int ledRed =  27;      // the number of the LED pin
